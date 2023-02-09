@@ -8,7 +8,6 @@ class Calculator {
         return a + b;
     }
 }
-
 public class Overloading {
     public static void main(String[] args) {
        Calculator calculate =new Calculator();

@@ -10,6 +10,7 @@ class Circle extends Shape {
 }
 
 public class Abstraction {
+
     public static void main(String[] args) {
         Circle person =new Circle();
         person.draw();

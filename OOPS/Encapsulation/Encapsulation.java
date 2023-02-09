@@ -21,7 +21,6 @@ package OOPS.Encapsulation;
         this.name = name;
     }
 }
-
 public class Encapsulation {
     public static void main(String[] args) {
         Student detail=new Student();

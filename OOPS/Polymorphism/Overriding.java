@@ -10,7 +10,6 @@ class Dog extends Animal {
         System.out.println("Dog barks");
     }
 }
-
 public class Overriding {
     public static void main(String[] args) {
         Animal sound =new Dog();
