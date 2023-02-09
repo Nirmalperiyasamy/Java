@@ -3,27 +3,26 @@ package Problems;
 import java.util.Arrays;
 
 public class Binarysearch {
-    public static void main(String[] args) {
-        int array[]={45,334,4,334,24,4,6,2,87,5};
-        Arrays.sort(array);
-        int f=0,l=array.length-1;
-        int t=87;
-int m=(f+l)/2;
-        for (int i = 0; i < array.length; i++) {
-if(array[m]>t){
-    l=m-1;
-}
-else if(array[m]<t){
-    f=m+1;
-}
-else{
-    System.out.println(args[m]);
-    System.out.println(m);
-    break;
-}
-m=(l+f)/2;
+
+    public static int binarySearch(int[] arr, int x) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == x) {
+                return mid;
+            } else if (arr[mid] < x) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
-       int z= Arrays.binarySearch(array,87);
-        System.out.println(z);
+        return -1;
+    }
+    public static void main(String[] args) {
+        int array[]={4,6,677,8,8,9,5,332,9,4,1};
+        Arrays.sort(array);
+       int result= binarySearch(array,9);
+        System.out.println(array[result]+" "+result);
     }
 }
