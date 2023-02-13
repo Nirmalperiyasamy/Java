@@ -23,7 +23,7 @@ public class OptioanlExample {
 
         // 4. orElseThrow method
         try {
-            System.out.println("Name (orElseThrow method): " + emptyOptional.orElseThrow(IllegalArgumentException::new));
+            System.out.println("Name (orElseThrow method): " + emptyOptional.orElseThrow(()->new IllegalArgumentException("error")));
         } catch (IllegalArgumentException e) {
             System.out.println("Caught IllegalArgumentException: " + e.getMessage());
         }
