@@ -13,8 +13,10 @@ public class Ordering {
        this.order =order;
 
     }
+
     Scanner sc = new Scanner(System.in);
-    public int amount (List<Menu> menu){
+    public int amount (List<Menu> menu
+    ){
         int sum=0;
        for (Menu m:menu){
            if (m.getOrder()==order){

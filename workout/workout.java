@@ -1,25 +1,25 @@
 package workout;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-public class workout {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-
-            while (true) {
-                System.out.print("Enter an integer: ");
-                try {
-                    int intValue = scanner.nextInt();
-                    System.out.println("You entered: " + intValue);
-                    break;
-                } catch (InputMismatchException e) {
-                    System.out.println("Invalid input. Please enter an integer.");
-                    scanner.nextLine();
-                }
-              //  System.out.println("mingks");
-            }
-            System.out.println("fhg");
-        }
+import workout.Display;
+ class Shape {
+    public  final int CIRCLE = 0;
+    public  final int SQUARE = 1;
+    public  final int TRIANGLE = 2;
+    static  int name=99;
+}
+enum Color {
+    RED,
+    GREEN,
+    BLUE
+}
+public class workout  {
+    public static void main(String[] args) {
+        Color colo=Color.BLUE;
+        Shape sh =new Shape();
+        System.out.println(sh.TRIANGLE);
+       // int shape = Shape.Triangle;
+       // System.out.println(shape);
+        System.out.println(colo);
     }
 
-
+}
