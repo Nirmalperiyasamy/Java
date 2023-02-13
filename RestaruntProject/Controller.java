@@ -64,12 +64,13 @@ public class Controller {
                 sc.nextLine();
                 continue;
             }
-
-            menus.add(new Menu(num, name, rate));
+            HashMap<Integer, Menu> menu = new HashMap<>();
+            menu.put(num,(new Menu(num, name, rate)));
             for (Menu m : menus) {
                 m.displayMenu();
             }
-
+            System.out.println(menu);
+            menu.forEach((key,value)-> System.out.println(value+" "));
             System.out.println("Press 1 to continue adding items to list or press 2 to order food");
             try {
                 entry = sc.nextInt();
