@@ -16,7 +16,7 @@ public class Inheritance {
             Animal animal = new Animal();
             animal.makeSound();  // outputs "Animal makes a sound"
 
-            Dog dog = new Dog();
+            Animal dog = new Dog();
             dog.makeSound();  // outputs "Dog barks"
 
             Animal dogAsAnimal = new Dog();

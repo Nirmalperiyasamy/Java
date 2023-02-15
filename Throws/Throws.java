@@ -7,7 +7,7 @@ package Throws;
 //   Cannot be used to propagate checked        Can be used to propagate checked exceptions by itself
 //   exceptions by itself
 public class Throws {
-    static void checkAge(int age) throws ArithmeticException {
+    static void checkAge(int age) throws ArithmeticException,IllegalStateException {
         if (age < 18) {
             throw new ArithmeticException("Access denied - You must be at least 18 years old.");
         } else {

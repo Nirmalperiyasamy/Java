@@ -3,13 +3,17 @@ package OptionalExample;
 import java.util.Optional;
 
 public class OptioanlExample {
+    static Integer  dorm;
+    static Boolean nirmal;
+
     public static void main(String[] args) {
         String value = null;
         Optional<String> optionalName1 = Optional.ofNullable(value);
         System.out.println("Name: " + optionalName1.orElse("Unknown"));
 
         Optional<String> optionalName = Optional.of("Nirmal");
-
+        System.out.println(nirmal);
+        System.out.println(dorm);
         // 1. get method
         System.out.println("Name (get method): " + optionalName.get());
 
@@ -46,6 +50,7 @@ public class OptioanlExample {
         // 9. filter method
         Optional<String> filteredOptional = optionalName.filter(name -> name.length() > 5);
         System.out.println("Name (filter method): " + filteredOptional.orElse("lesser length"));
+
     }
 }
 
